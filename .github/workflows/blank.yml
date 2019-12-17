@@ -1,0 +1,32 @@
+import javax.swing.*;
+public class Projecto1_ES {
+    //String horas;
+
+    public static void main(String[] args) {
+        // TODO code application logic here (Coment)
+        
+        JOptionPane.showMessageDialog(null,"Bem Vindo ao Cadastro Eleitoral","CADASTRO ELEITORAL",JOptionPane.INFORMATION_MESSAGE);
+       // o código acima deseja boas vindas ao usuário da aplicação do cadastro eleitoral (Coment)
+
+        String x=JOptionPane.showInputDialog("Escreva o seu primeiro e o ultimo nome");
+        String y=JOptionPane.showInputDialog("Escreva o nome do seu bairo");
+       // os códigos acima pedem o nome do eleitor e o respectivo bairro de residência respectivamente.
+
+        int z=Integer.parseInt(JOptionPane.showInputDialog("Postos de recenseamento disponiveis \n 1: XXXX \n 2: YYYY \n 3: ZZZZ"));
+        // de seguida serão mostrados os postos de recenseamentos disponíveis de acordo com o bairro do eleitor.
+
+        switch(z){
+            case 1:int k=(int)(Math.random()*50);
+                JOptionPane.showMessageDialog(null, "SENHA: "+k+"\n NOME: \t \t"+x+"\n BAIRRO: \t \t"+y+"\n POSTO A SE RECENSEAR: \t \t XXXX","CADASTRO ELEITORAL",JOptionPane.INFORMATION_MESSAGE);break;
+                //JOptionPane.showMessageDialog(null, "NOME: \t \t"+x+"\n BAIRRO: \t \t"+y+"\n POSTO A SE RECENSEAR: \t \t XXXX"+"\n SENHA: "+k+);break;
+            
+            case 2:int a=(int)(Math.random()*50);
+                JOptionPane.showMessageDialog(null, "SENHA: "+a+"\n NOME: \t \t"+x+"\n BAIRRO: \t \t"+y+"\n POSTO A SE RECENSEAR: \t \t YYYY","CADASTRO ELEITORAL",JOptionPane.INFORMATION_MESSAGE);break;
+                
+            case 3: int b=(int)(Math.random()*100);
+                JOptionPane.showMessageDialog(null, "SENHA: "+b+"\n NOME: \t \t"+x+"\n BAIRRO: \t \t"+y+"\n POSTO A SE RECENSEAR: \t \t ZZZZ","CADASTRO ELEITORAL",JOptionPane.INFORMATION_MESSAGE);break;
+       // dado os postos de recenseamento disponíveis, o eleitor poderá escolher o posto de recenseamento que lhe convém e de seguida ser-lhe-á dado uma senha          
+            default:JOptionPane.showMessageDialog(null, " Opção Inválida - TENTE NOVAMENTE","CADASTRO ELEITORAL",JOptionPane.INFORMATION_MESSAGE); break;
+        }
+    }
+}
